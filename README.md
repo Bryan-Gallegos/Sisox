@@ -1,8 +1,6 @@
 # sisox
 Sistema de Gestión para el Suministro de Oxígeno
 
-proceso de mejora en curso
-
 Metodologia aplicada al proyecto SCRUM
 
 Entorno de trabajo con django
