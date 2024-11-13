@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro de Usuarios</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../static/css/style1.css">
+</head>
+<body>
+  <header class="header content">
+    <div class="header-video">
+      <video src="../static/videos/video.mp4" autoplay loop></video>
+    </div>
+  </header>
+
+  <section class="top-part">
+    <div class="cont">
+      <div class="form sign-in">
+        <form action="registroUsuario" method="POST">
+          <div class="textbox">
+            <label >
+              {%csrf_token%}
+            <input type="text" placeholder="Nombre y Apellido" name="first_name" requiered>
+            </label>
+
+          </div>
+            <label>
+              {% csrf_token %}
+              <input type="text" placeholder="Nombre de Usuario" name="username" requiered>
+            </label>
+            <label>
+              {% csrf_token %}
+              <input type="tel" name="telefono" placeholder="Número Telefono" required>
+            </label>
+            <label>
+              {% csrf_token %}
+              <input type="email"  placeholder="Email" name="email" requiered>
+            </label>
+
+            <label>
+              {% csrf_token %}
+              <input type="password"  placeholder="Contraseña" name="password1Cliente" requiered>
+            </label>
+            <label>
+              {% csrf_token %}
+              <input type="password"  placeholder="Confirmar Contraseña" name="password2Cliente" requiered>
+            </label>
+            <br>             
+             <div style="text-align: center;padding-top: 10px; padding-bottom: 10px;">
+               <table class="default">
+                 <tr>
+                   <td>
+                     <button class="submit" type="btn" style="margin-left: 60px;margin-right: 40px;margin-top: 0px;margin-bottom: 0px;">Registrarse</button>
+                   </td>
+                   <td><button class="submit" type="btn" style="margin-left: 25px;margin-right: 80px;margin-top: 0px;margin-bottom: 0px;"><a href="../" style="color: white; text-decoration: none;">Cancelar</a></button></td>
+                 </tr>
+               </table>
+             </div>
+             
+        </form>
+      </div>
+
+      <div class="sub-cont" style="left: 585px;">
+        <div class="img">
+          <div class="img-text m-up" style="left: -25px;">
+            <h2>Si usted tiene una planta de oxígeno</h2>
+            <p style="margin-top: 200px;">pulse aqui.</p>
+           
+          </div>
+          <div class="img-text m-in" style="left: 25px;">
+            <h2>Si desea suministro <br> de oxígeno</h2>
+            <p style="margin-top: 200px;">pulse aqui.</p>
+
+          </div>
+          <div class="img-btn" style="margin-right: 85px;">
+            <span class="m-up" >Iniciar Sesión</span>
+            <span class="m-in">Iniciar Sesión</span>
+          </div>
+        </div>
+        <div class="form sign-up">
+          <form action="registroAdministrador" method="POST">
+        
+            <h2>Registro de Empresa</h2>
+           
+            <br><br>
+              <input type="number"  placeholder="Codigo Asignado por ESSALUD" name="codigo" requiered>
+              <label >
+                {%csrf_token%}
+              <input type="text" placeholder="Nombre de Empresa" name="nameAdmi" requiered>
+              </label>
+              
+           
+              <label>
+                {% csrf_token %}
+                <input type="tel"  placeholder="Telefono" name="telAdmi" requiered>
+              </label>
+	            <label>
+                {% csrf_token %}
+                <input type="email"  placeholder="Correo" name="correoAdmi" requiered>
+              </label>
+              <label>
+                {% csrf_token %}
+                <input type="password"  placeholder="Password" name="password1Admi" requiered>
+              </label>
+              <label>
+                {% csrf_token %}
+                <input type="password"  placeholder="Confirmar Contraseña" name="password2Admi" requiered>
+              </label>
+              <br>             
+             <div style="text-align: center;padding-top: 10px; padding-bottom: 10px;">
+               <table class="default">
+                 <tr>
+                   <td>
+                     <button class="submit" type="btn" style="margin-left: 60px;margin-right: 40px;margin-top: 0px;margin-bottom: 0px;">Registrarse</button>
+                   </td>
+                   <td><button class="submit" type="btn" style="margin-left: 25px;margin-right: 80px;margin-top: 0px;margin-bottom: 0px;"><a href="../" style="color: white; text-decoration: none;">Cancelar</a></button></td>
+                 </tr>
+               </table>
+             </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+<script type="text/javascript" src="../static/js/script.js"></script>
+</body>
+</html>
